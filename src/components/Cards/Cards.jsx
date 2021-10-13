@@ -25,7 +25,6 @@ const Cards = (props) => {
             <Typography variant="h5">
               <CountUp start={0} end={props.data.active_cases} duration={1} />
             </Typography>
-            <Typography color="textSecondary">{props.data.date}</Typography>
             <Typography variant="body2">Number of active</Typography>
           </CardContent>
         </Grid>
@@ -44,7 +43,6 @@ const Cards = (props) => {
             <Typography variant="h5">
               <CountUp start={0} end={props.data.deaths} duration={1} />
             </Typography>
-            <Typography color="textSecondary">{props.data.date}</Typography>
             <Typography variant="body2">Number of death</Typography>
           </CardContent>
         </Grid>
@@ -63,7 +61,6 @@ const Cards = (props) => {
             <Typography variant="h5">
               <CountUp start={0} end={props.data.recovered} duration={1} />
             </Typography>
-            <Typography color="textSecondary">{props.data.date}</Typography>
             <Typography variant="body2">Number of recoveries</Typography>
           </CardContent>
         </Grid>
