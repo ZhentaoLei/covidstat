@@ -1,31 +1,23 @@
-import React from "react";
-import Cards from "./components/Cards/Cards";
-import Charts from "./components/Charts/Charts";
-import Region from "./components/Region/Region";
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navigation from "./components/Navigation/Navigation";
-import styles from "./App.module.css";
-import fetchData from "./api/index";
 
-class App extends React.Component {
-  state = {
-    data: {},
-  };
+import Homepage from "./components/Homepage/Homepage";
+import Charts from "./components/Charts/Charts";
+import Cards from "./components/Cards/Cards";
 
-  async componentDidMount() {
-    const data = await fetchData();
-    this.setState({ data: data });
-  }
+class App extends Component {
   render() {
-    const { data } = this.state;
     return (
-      <>
-        <div className={styles.container}>
-          <Cards data={data} />
-          <Charts />
-          <Region />
+      <Router>
+        <div className="app">
+          <Route exact path="/covidstat" component={Homepage} />
+          <Route path="/Cards" component={Cards} />
+          <Route path="/Charts" component={Charts} />
+
+          <Navigation />
         </div>
-        <Navigation />
-      </>
+      </Router>
     );
   }
 }

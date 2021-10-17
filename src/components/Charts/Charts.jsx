@@ -1,7 +1,13 @@
 import React from "react";
 
-const Charts = () => {
-  return <h1>Charts</h1>;
-};
+class Charts extends React.Component {
+  render() {
+    return (
+      <div>
+        <div>This is Page1!</div>
+      </div>
+    );
+  }
+}
 
 export default Charts;
