@@ -6,17 +6,13 @@ import RestoreIcon from "@mui/icons-material/Restore";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CssBaseline from "@mui/material/CssBaseline";
 import ShowChart from "@mui/icons-material/ShowChart";
-// import Cards from "../Cards/Cards";
-// import Charts from "../Charts/Charts";
-// import Region from "../Region/Region";
-// import styles from "../../App.module.css";
 
 import { Link, withRouter } from "react-router-dom";
 
 class Navigation extends React.Component {
   state = {
     value: -1,
-    pathMap: ["../Cards", "../Charts", "../Region/Region"],
+    pathMap: ["../Cards", "../Charts", "../Compare"],
   };
 
   componentWillReceiveProps(newProps) {
@@ -58,7 +54,7 @@ class Navigation extends React.Component {
               to={pathMap[1]}
             />
             <BottomNavigationAction
-              label="Region"
+              label="Regions"
               icon={<LocationOnIcon />}
               component={Link}
               to={pathMap[2]}

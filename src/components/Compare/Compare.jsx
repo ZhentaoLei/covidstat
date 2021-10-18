@@ -1,10 +1,12 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 
-const Region = (navigation) => {
+const Compare = (navigation) => {
   return (
     <div>
-      <h1>Charts</h1>
+      <h1>next to implement</h1>
+      <p> This page will compare stat between different province</p>
+      <p> in canada Good luck Alberta </p>
       <Typography onPress={() => navigation.navigate("Home")}>
         Region
       </Typography>
@@ -12,4 +14,4 @@ const Region = (navigation) => {
   );
 };
 
-export default Region;
+export default Compare;

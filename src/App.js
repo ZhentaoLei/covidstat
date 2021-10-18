@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation/Navigation";
 import Homepage from "./components/Homepage/Homepage";
 import Charts from "./components/Charts/Charts";
 import Cards from "./components/Cards/Cards";
+import Compare from "./components/Compare/Compare";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/covidstat" component={Homepage} />
           <Route path="/Cards" component={Cards} />
           <Route path="/Charts" component={Charts} />
+          <Route path="/Compare" component={Compare} />
 
           <Navigation />
         </div>
